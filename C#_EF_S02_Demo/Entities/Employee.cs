@@ -13,5 +13,10 @@ namespace C__EF_S02_Demo.Entities
         public string Address { get; set; }
         public double Salary { get; set; }
         public int Age { get; set; }
+
+        public override string ToString()
+        {
+            return $"Id : {Id} :: Name : {Name} :: Age : {Age} :: Salary : {Salary} : Address : {Address}";
+        }
     }
 }
