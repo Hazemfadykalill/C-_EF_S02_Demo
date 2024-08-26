@@ -34,6 +34,8 @@ namespace C__EF_S02_Demo.Contexts
         //Names Table That In Database
         public DbSet<Employee> Employees { get; set; }
         public DbSet<Department> Departments { get; set; }
+        public DbSet<Cousre> cousres { get; set; }
+        public DbSet<Student> Students { get; set; }
 
     }
 }
