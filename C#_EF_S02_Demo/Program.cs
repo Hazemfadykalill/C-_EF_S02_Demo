@@ -63,19 +63,33 @@ namespace C__EF_S02_Demo
 
             #region Update
 
-            var EmpId_40 = DataBaseObject.Employees.FirstOrDefault(x=>x.Id==40);//Id : 40 :: Name : Mohamed :: Age : 30 :: Salary : 14000 : Address : Cairo
-         
-            Console.WriteLine(DataBaseObject.Entry(EmpId_40).State); //Unchanged
+            //var EmpId_40 = DataBaseObject.Employees.FirstOrDefault(x=>x.Id==40);//Id : 40 :: Name : Mohamed :: Age : 30 :: Salary : 14000 : Address : Cairo
 
-            //Update
-            EmpId_40.Name = "Omar Ali"; 
+            //Console.WriteLine(DataBaseObject.Entry(EmpId_40).State); //Unchanged
 
-            Console.WriteLine(DataBaseObject.Entry(EmpId_40).State);//Modified
+            ////Update
+            //EmpId_40.Name = "Omar Ali"; 
 
-            Console.WriteLine(EmpId_40);                                        //Id : 40 :: Name : Omar Ali :: Age : 30 :: Salary : 14000 : Address : Cairo
-            DataBaseObject.SaveChanges();
-            Console.WriteLine(DataBaseObject.Entry(EmpId_40).State);//Unchanged
-            #endregion                       
+            //Console.WriteLine(DataBaseObject.Entry(EmpId_40).State);//Modified
+
+            //Console.WriteLine(EmpId_40);                                        //Id : 40 :: Name : Omar Ali :: Age : 30 :: Salary : 14000 : Address : Cairo
+            //DataBaseObject.SaveChanges();
+            //Console.WriteLine(DataBaseObject.Entry(EmpId_40).State);//Unchanged
+            #endregion
+
+            #region Delete || Remove
+            //var Result=DataBaseObject.Employees.FirstOrDefault(E=>E.Id==40);
+            //Console.WriteLine(DataBaseObject.Entry(Result).State);  //Unchanged
+            //DataBaseObject.Employees.Remove(Result);
+            //Console.WriteLine(DataBaseObject.Entry(Result).State);  //Deleted
+            //DataBaseObject.SaveChanges();   
+            //Console.WriteLine(DataBaseObject.Entry(Result).State);  //Detached
+
+        
+            #endregion
+
+
+
 
 
             #endregion
