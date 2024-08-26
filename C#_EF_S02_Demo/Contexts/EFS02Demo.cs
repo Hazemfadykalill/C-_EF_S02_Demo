@@ -10,7 +10,8 @@ using System.Threading.Tasks;
 
 namespace C__EF_S02_Demo.Contexts
 {
-    public class EFS02Demo : DbContext
+  public class EFS02Demo : DbContext
+
     {
         //To Connect Database
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -18,13 +19,14 @@ namespace C__EF_S02_Demo.Contexts
             optionsBuilder.UseSqlServer(" Server = .;Database=EFS02Demo;Trusted_Connection=True;TrustServerCertificate=True");
         }
 
-
+        //Configuration Class
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            //To Each Class
             //modelBuilder.ApplyConfiguration(new EmployeeConfiguration());
             //modelBuilder.ApplyConfiguration(new DepartmentConfiguration());
 
-            //Or
+            //Or [To All Class In The Same Time]
             modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
 
 
