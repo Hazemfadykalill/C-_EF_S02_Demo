@@ -36,8 +36,10 @@ namespace C__EF_S02_Demo.Configurations
                    .IsRequired();
             builder.HasOne(E => E.Department).
                 WithOne(E => E.Manager).
-                HasForeignKey<Department>(D=>D.EmpId);
-               
+                HasForeignKey<Department>(D => D.EmpId);
+
+
+
 
 
 

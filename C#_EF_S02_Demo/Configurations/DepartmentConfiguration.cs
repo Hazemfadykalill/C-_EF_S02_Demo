@@ -22,9 +22,15 @@ namespace C__EF_S02_Demo.Configurations
                 HasMaxLength(30);
 
             builder.HasOne(D => D.Manager).
-                
+
                 WithOne(E => E.Department).
-                HasForeignKey<Department>(E=>E.EmpId);
+                HasForeignKey<Department>(E => E.EmpId);
+
+
+            builder.HasMany(D => D.Employees).
+
+                WithOne(E => E.WorkFor).
+                HasForeignKey(D => D.WorkForId );
         }
     }
 }
