@@ -20,6 +20,11 @@ namespace C__EF_S02_Demo.Configurations
                 IsRequired().HasColumnName("DepartmentName").
                 HasColumnType("varchar").
                 HasMaxLength(30);
+
+            builder.HasOne(D => D.Manager).
+                
+                WithOne(E => E.Department).
+                HasForeignKey<Department>(E=>E.EmpId);
         }
     }
 }

@@ -10,6 +10,7 @@ namespace C__EF_S02_Demo.Entities
     {
         public int Id { get; set; }
         public string Name { get; set; }
+        public int EmpId { get; set; }       //forignKey
         public Employee Manager { get; set; }//Navigation property
     }
 }

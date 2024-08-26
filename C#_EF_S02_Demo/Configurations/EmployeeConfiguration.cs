@@ -34,7 +34,13 @@ namespace C__EF_S02_Demo.Configurations
 
             builder.Property(e => e.Age)
                    .IsRequired();
-                   
+            builder.HasOne(E => E.Department).
+                WithOne(E => E.Manager).
+                HasForeignKey<Department>(D=>D.EmpId);
+               
+
+
+
         }
     }
 }
